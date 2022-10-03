@@ -62,6 +62,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'database_cleaner'
 end
 
 group :test do
@@ -70,3 +71,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'rspec-rails', '~> 4.0.0.beta2'
+gem 'cancancan'
+gem 'devise'
