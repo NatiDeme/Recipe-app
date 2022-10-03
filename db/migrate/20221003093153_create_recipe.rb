@@ -7,6 +7,6 @@ class CreateRecipe < ActiveRecord::Migration[7.0]
       t.string :description
       t.boolean :public
     end
-    add_reference :recipes, :user, index:true
+    add_reference :recipes, :user, index: true
   end
 end
