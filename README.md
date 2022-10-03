@@ -1,75 +1,60 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Recipe App
 
-> Description the project.
-
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages : Ruby, HTML, CSS
+- Frameworks: Ruby on Rails
 
-## Live Demo (if available)
+<!-- ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://livedemo.com) -->
 
+## Setup
 
-## Getting Started
+If you wish to run the project locally, please do the following:
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- Clone the repository to your local machine. - **`git clone hhttps://github.com/NatiDeme/recipe-app`** - **`cd recipe-app`**
 
+### Running the app
 
-To get a local copy up and running follow these simple example steps.
+- Run `rake db:create:all` and `rake db:migrate`
+- Run `rake db:seed` to populate the database with some sample data.
+- Run `rails s` to start the server.
+- In your browser, go to http://localhost:3000.
 
-### Prerequisites
+### Testing
 
-### Setup
+- Run gem install rspec to install Rspec,
+- Run rspec spec to run all the test cases, and
+- Run rspec to run test cases individually.
 
-### Install
+## Author
 
-### Usage
+👤 **Natnael Demelash**
 
-### Run tests
+- GitHub: [@githubhandle](https://github.com/NatiDeme)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/natnael-demelash/)
 
-### Deployment
+👤 **Victor Akabueze**
 
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Linkedin [victor-David](linkedin.com/in/victor-chiemerie-302a97230)
+  -Twitter [victor-David](https://twitter.com/Victorjheart)
+- Github: [@Victor-David](https://github.com/jheart-vic)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Terbeche/Catalog-Ruby-Capstone/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
