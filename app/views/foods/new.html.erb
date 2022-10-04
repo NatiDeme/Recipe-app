@@ -1,0 +1,28 @@
+
+<%= form_with model: @food, url: foods_path, scope: :food do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name,  autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :measurement_unit %><br />
+    <%= f.text_field :measurement_unit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity, autocomplete: "quantity" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price, autocomplete: "new-price" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Add food to list" %>
+  </div>
+<% end %>

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   devise_scope :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  # get '/foods', to: 'foods#index'
+  # get '/foods/new', to: 'foods#new'
+
+  resources :foods, only: %i[index new create destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
