@@ -1,8 +1,12 @@
+<%= link_to 'Add new recipe', new_recipe_path%>
 <% @recipes.each do |recipe| %>
    <div>
-   <%= link_to recipes_detail_path(recipe.id) do%>
+   <div>
+   <%= link_to recipe_path(recipe.id) do%>
     <p><%= recipe.name%></p>
-    <p><%= recipe.preparation_time.strftime("%H:%M") %></p>
    <%end%>
+   <p><%= recipe.description%></p>
+   </div>
+   <%= button_to "Delete", recipe_path(recipe.id), method: :delete%>
   </div>
 <%end%>
