@@ -1,1 +1,18 @@
-<p><%= @recipe.name%></p>
+<h1 class="recipe-title"><%= @recipe.name%></h1>
+<div class="recipe-detail-controller">
+<div>
+    <div>
+    <p>Preparation Time: <%= @recipe.preparation_time.strftime("%H:%M")%></p>
+    </div>
+    <div>
+    <p>Cooking Time: <%= @recipe.cooking_time.strftime("%H:%M")%></p>
+    </div>
+</div>
+<div>
+<% if @recipe.public == true%>
+<div class="public-label"><p>Public: </p><div class="public-status-true"><div class="true-ball"></div></div></div>
+<%else%>
+<div class="public-label"><p>Public: </p><div class="public-status-false"><div class="false-ball"></div></div></div>
+<% end %>
+</div>
+</div>
