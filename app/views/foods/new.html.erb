@@ -1,5 +1,5 @@
-<%= form_with model: @food, url: foods_path,  local: true, data: {turbo:false} do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<%= form_with model: @food, url: foods_path, scope: :food do |f| %>
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name,  autofocus: true, autocomplete: "name" %>
@@ -8,6 +8,11 @@
   <div class="field">
     <%= f.label :measurement_unit %><br />
     <%= f.text_field :measurement_unit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity, autocomplete: "quantity" %>
   </div>
 
   <div class="field">
