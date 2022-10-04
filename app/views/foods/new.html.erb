@@ -1,5 +1,5 @@
 
-<%= form_with model: @food, url: foods_path, scope: :food do |f| %>
+<%= form_with model: @food, method: :post, local: true, url: foods_path, scope: :food do |f| %> 
 
   <div class="field">
     <%= f.label :name %><br />
