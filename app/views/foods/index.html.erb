@@ -1,0 +1,26 @@
+<div>
+<h1>List of foods</h1>
+    <div>
+      <%= link_to "Add food", user_foods_path %>
+    </div>
+    <table">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Measurement Unit</th>
+      <th>Unit Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @foods.each do |food| %>
+    <tr>
+      <th><%= food.name %></th>
+      <td><%= food.measurement_unit %></td>
+      <td>$<%= food.price %></td>
+      <td><%= button_to "Delete", food_path(food.id), method: :delete %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
