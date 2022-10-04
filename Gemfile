@@ -75,5 +75,4 @@ group :test do
   gem 'webdrivers'
 end
 
-
 gem 'rspec-rails', '~> 4.0.0.beta2'
