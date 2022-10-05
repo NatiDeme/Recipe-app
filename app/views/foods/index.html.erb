@@ -1,6 +1,6 @@
 <h1>List of foods</h1>
     <div>
-      <%= link_to "Add food", new_food_path %>
+      <%= button_to "Add food", new_food_path, method: :get %>
     </div>
     <table>
   <thead>
@@ -15,7 +15,7 @@
   <tbody>
   <% @foods.each do |food| %>
     <tr>
-      <th><%= food.name %></th>
+      <td><%= food.name %></td>
       <td><%= food.measurement_unit %></td>
       <td><%= food.quantity %></td>
       <td>$<%= food.price %></td>
