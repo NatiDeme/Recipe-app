@@ -13,6 +13,7 @@ class FoodsController < ApplicationController
     # format.html do
     @food = Food.new(food_params)
     @food.user = current_user
+    @recipe_food = RecipeFood(food_id: @food.id)
     if @food.valid?
       @food.save
       flash[:notice] = 'New Food Created Successfully'
