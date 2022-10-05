@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   # get '/foods/new', to: 'foods#new'
 
   resources :foods, only: %i[index new create destroy]
+<<<<<<< HEAD
   resources :recipes, only: %i[index new create show destroy]
+=======
+  resources :public_recipes, only: %i[index], as: 'public_recipes'
+>>>>>>> public_recipes
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
