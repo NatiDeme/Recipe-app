@@ -1,4 +1,4 @@
-<%= form_with model: @recipe_food, method: :post, local: true, url: recipes_path, scope: :recipe_food do |f| %> 
+<%= form_with model: @recipe_food, method: :post, local: true, url: recipe_recipe_foods_path, scope: :recipe_food do |f| %> 
 <div class="field">
     <%= f.label :quantity %><br />
     <%= f.number_field :quantity, autocomplete: "quantity" %>
