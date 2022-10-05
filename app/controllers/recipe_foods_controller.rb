@@ -12,7 +12,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food.recipes = @recipe
     @recipe_food.foods = @food
     @recipe_food.save! 
-    # redirect_to root_path
+    redirect_to recipe_path(@recipe.id)
   end
 
 

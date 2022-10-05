@@ -97,3 +97,16 @@ tbody tr:nth-child(odd) {
 tbody td:last-child {
   border-right: 1px solid black;
 }
+
+.public-recipe-cont {
+  border: 1px solid black;
+  padding: 1rem;
+  width: 50%;
+  margin-left: 10%;
+  font-size: large;
+}
+
+.public-recipe-mini-count {
+  display: flex;
+  gap: 3rem;
+}
