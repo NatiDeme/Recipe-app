@@ -16,8 +16,41 @@
 <% end %>
 </div>
 </div>
+<div class="recipe-detail-buttons">
 <div>
-<%= link_to new_recipe_recipe_food_path(@recipe) do %>
-    <p>Ingre</p>
+<%= button_to new_recipe_recipe_food_path(@recipe), method: :get do %>
+    <p>Generate Showwing List</p>
 <%end%>
 </div>
+<div>
+<%= button_to new_recipe_recipe_food_path(@recipe), method: :get do %>
+    <p>Add Ingredients</p>
+<%end%>
+</div>
+</div>
+
+
+<div class="recipe-detail-table">
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+   <tbody>
+   <%@ingridents_list.each do |food| %>
+    <tr>
+      <td><%= food.foods.name%></td>
+      <td><%= food.quantity%><%= food.foods.measurement_unit%></td>
+      <td>$<%= food.foods.price%></td>
+      <td>Actions</td>
+    </tr>
+     <%end%>
+  </tbody>
+  </table>
+  </div>
+
+ 

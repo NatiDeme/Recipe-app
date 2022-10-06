@@ -110,3 +110,13 @@ tbody td:last-child {
   display: flex;
   gap: 3rem;
 }
+
+.recipe-detail-buttons {
+  display: flex;
+  gap: 15rem;
+  justify-content: center;
+}
+
+.recipe-detail-table {
+  margin-top: 2rem;
+}
