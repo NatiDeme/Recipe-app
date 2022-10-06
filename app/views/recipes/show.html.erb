@@ -46,7 +46,7 @@
       <td><%= food.foods.name%></td>
       <td><%= food.quantity%><%= food.foods.measurement_unit%></td>
       <td>$<%= food.foods.price%></td>
-      <td>Actions</td>
+      <td><%= button_to "Remove", food_recipe_remove_path(food.id), method: :delete%></td>
     </tr>
      <%end%>
   </tbody>

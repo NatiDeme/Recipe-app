@@ -1,3 +1,4 @@
+<h1 class="public-recipe-head">Public Recipes</h1>
 <% @public_recipes.each do |recipe| %>
   <%recipe.recipe_foods.all.includes([:foods])%>
   <div class="public-recipe-cont">

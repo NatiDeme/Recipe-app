@@ -7,7 +7,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     # @recipe_foods = @recipe.recipe_foods
     @ingridents_list = RecipeFood.includes([:foods]).where(recipes_id: params[:id])
-    puts @ingridents_list
   end
  
   def new
@@ -30,6 +29,12 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     redirect_to recipes_path, notice: 'Successfully removed the Recipe.'
+  end
+
+  def remove
+    @ingridents_list = RecipeFood.find(params[:id])
+    @ingridents_list.destroy
+    redirect_to recipe_path
   end
 
   private
