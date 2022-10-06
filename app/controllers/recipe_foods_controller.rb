@@ -12,7 +12,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food.recipes = @recipe
     @recipe_food.foods = @food
     @recipe_food.save! 
-    flash[:alert] = 'Ingridents Successfully Added'
+    # flash[:alert] = 'Ingridents Successfully Added'
     redirect_to recipe_path(@recipe.id)
   end
 

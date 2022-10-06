@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
     @recipe.user = current_user
     if @recipe.valid?
       @recipe.save
-      flash[:notice] = 'New Recipe Created Successfully'
+      # flash[:notice] = 'New Recipe Created Successfully'
       redirect_to recipes_path
     else
       render :new
@@ -28,7 +28,8 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    redirect_to recipes_path, notice: 'Successfully removed the Recipe.'
+    redirect_to recipes_path
+    # notice: 'Successfully removed the Recipe.'
   end
 
   def remove
