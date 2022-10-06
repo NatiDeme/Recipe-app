@@ -11,6 +11,11 @@
   </head>
 
   <body>
+  <div class="Nav-bar">
+  <p class="nav-link"><%= link_to 'Foods', root_path%></p>
+  <p class="nav-link"><%= link_to 'Recipes', recipes_path%></p>
+  <p class="nav-link"><%= link_to 'Public Recipes', public_recipes_path%></p>
+  </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> 
     <%= yield %>

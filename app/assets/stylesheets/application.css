@@ -127,3 +127,25 @@ tbody td:last-child {
   display: flex;
   justify-content: center;
 }
+
+.Nav-bar {
+  display: flex;
+  gap: 1rem;
+  background-color: black;
+  padding: 1rem;
+  padding-left: 3rem;
+}
+
+body {
+  margin: 0;
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+.nav-link a:hover {
+  text-decoration: underline;
+}
