@@ -18,7 +18,7 @@
 </div>
 <div class="recipe-detail-buttons">
 <div>
-<%= button_to new_recipe_recipe_food_path(@recipe), method: :get do %>
+<%= button_to general_shopping_list_path(@recipe.id), method: :get do %>
     <p>Generate Showwing List</p>
 <%end%>
 </div>

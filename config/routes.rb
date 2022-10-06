@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # get '/recipe_foods/new/:id', to: 'recipe_foods#new', as: 'new_recipe_food'
   # post '/recipe_foods', to: 'recipe_foods#create', as: 'create_ing'
   delete '/recipe/remove/:id', to: 'recipes#remove', as: 'food_recipe_remove'
+  get '/general_shopping_list/:id', to: 'shopping_lists#index', as: 'general_shopping_list'
   devise_scope :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
