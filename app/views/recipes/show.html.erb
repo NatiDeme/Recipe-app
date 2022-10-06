@@ -1,0 +1,56 @@
+<h1 class="recipe-title"><%= @recipe.name%></h1>
+<div class="recipe-detail-controller">
+<div>
+    <div>
+    <p>Preparation Time: <%= @recipe.preparation_time.strftime("%H:%M")%></p>
+    </div>
+    <div>
+    <p>Cooking Time: <%= @recipe.cooking_time.strftime("%H:%M")%></p>
+    </div>
+</div>
+<div>
+<% if @recipe.public == true%>
+<div class="public-label"><p>Public: </p><div class="public-status-true"><div class="true-ball"></div></div></div>
+<%else%>
+<div class="public-label"><p>Public: </p><div class="public-status-false"><div class="false-ball"></div></div></div>
+<% end %>
+</div>
+</div>
+<div class="recipe-detail-buttons">
+<div>
+<%= button_to new_recipe_recipe_food_path(@recipe), method: :get do %>
+    <p>Generate Showwing List</p>
+<%end%>
+</div>
+<div>
+<%= button_to new_recipe_recipe_food_path(@recipe), method: :get do %>
+    <p>Add Ingredients</p>
+<%end%>
+</div>
+</div>
+
+
+<div class="recipe-detail-table">
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+   <tbody>
+   <%@ingridents_list.each do |food| %>
+    <tr>
+      <td><%= food.foods.name%></td>
+      <td><%= food.quantity%><%= food.foods.measurement_unit%></td>
+      <td>$<%= food.foods.price%></td>
+      <td><%= button_to "Remove", food_recipe_remove_path(food.id), method: :delete%></td>
+    </tr>
+     <%end%>
+  </tbody>
+  </table>
+  </div>
+
+ 

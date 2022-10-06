@@ -1,0 +1,27 @@
+<h1 class="public-recipe-head">Public Recipes</h1>
+<% @public_recipes.each do |recipe| %>
+  <%recipe.recipe_foods.all.includes([:foods])%>
+  <div class="public-recipe-cont">
+  <div>
+    <div class="public-recipe-mini-count">
+      <div>
+        <h3>
+          <%= link_to recipe.name, recipe_path(id: recipe.id, user_id: recipe.user.id) %>
+        </h3>
+        <h5>By: <%= recipe.user.name %></h5>
+      </div>
+      <div>
+        <h5>Total foods: <%= recipe.recipe_foods.length %></h5>
+        <% sum = 0 %>
+        <h5>
+          Total price : $ <% recipe.recipe_foods.each do |food| %> <% sum +=
+          food.foods.price %> <% end %> <%= sum %>
+        </h5>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+<%end%>
+

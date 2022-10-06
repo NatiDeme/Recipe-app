@@ -1,0 +1,12 @@
+<%= form_with model: @recipe_food, method: :post, local: true, url: recipe_recipe_foods_path, scope: :recipe_food do |f| %> 
+<div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity, autocomplete: "quantity" %>
+  </div>
+  <div class="field">
+    <%= f.select :food_id, @foods.map { |food| [food.name, food.id] } , class:'p-2 mb-2' %> 
+  </div>
+  <div class="actions">
+    <%= f.submit "Add Ingredients" %>
+  </div>
+<%end%>

@@ -11,7 +11,6 @@ class FoodsController < ApplicationController
   def create
     # respond_to do |format|
     # format.html do
-    puts food_params
     @food = Food.new(food_params)
     @food.user = current_user
     if @food.valid?
