@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'users#index'
+  root 'foods#index'
   get '/users', to: 'users#index', as: 'users'
   # get '/recipes', to: 'recipes#index', as: 'recipes'
   # get '/recipes/:id', to: 'recipes#show', as: 'recipes_detail'
