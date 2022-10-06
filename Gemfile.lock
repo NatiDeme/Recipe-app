@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ffi/ffi.git
+  revision: e6311548e4dce7c98a54d6ab0f996e95dc413b07
+  submodules: true
+  specs:
+    ffi (1.15.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -73,6 +80,9 @@ GEM
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.3)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     cancancan (3.4.0)
     capybara (3.37.1)
       addressable
@@ -226,6 +236,7 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.4)
       tzinfo (>= 1.0.0)
+    uniform_notifier (1.16.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -251,11 +262,13 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bullet
   cancancan
   capybara
   database_cleaner
   debug
   devise
+  ffi!
   importmap-rails
   jbuilder
   pg (~> 1.1)

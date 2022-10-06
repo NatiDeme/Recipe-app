@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
     # @recipe_foods = @recipe.recipe_foods
     @ingridents_list = RecipeFood.includes([:foods]).where(recipes_id: params[:id])
   end
- 
+
   def new
     @recipe = Recipe.new
   end

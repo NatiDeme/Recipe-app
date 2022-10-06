@@ -27,6 +27,9 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+gem 'bullet'
+
+gem 'ffi', github: 'ffi/ffi', submodules: true
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -53,7 +56,9 @@ gem 'devise'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
 group :development do
@@ -65,7 +70,6 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  gem 'database_cleaner'
 end
 
 group :test do
@@ -74,5 +78,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-gem 'rspec-rails', '~> 4.0.0.beta2'

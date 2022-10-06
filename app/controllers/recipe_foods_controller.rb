@@ -11,12 +11,10 @@ class RecipeFoodsController < ApplicationController
     @food = Food.find_by(id: @me['food_id'])
     @recipe_food.recipes = @recipe
     @recipe_food.foods = @food
-    @recipe_food.save! 
+    @recipe_food.save!
     redirect_to recipe_path(@recipe.id)
   end
 
-
-  
   private
 
   def set_recipe_params
