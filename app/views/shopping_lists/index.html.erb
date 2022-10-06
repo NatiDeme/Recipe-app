@@ -1,0 +1,14 @@
+<h2>Shopping List</h2>
+<div>
+  <div>
+    <span> Amount  of items to buy:  <%= shopping_list.length %></span>
+    <span> 
+      <% sum = 0 %>
+      <h5>Total value  of food needed: $ <% shopping_list.recipe_foods.each do |food| %>
+      <% sum += food.food.price %>
+      <% end %>
+      <%= sum %>
+      </h5>%>
+    </span>
+  </div>
+</div>
