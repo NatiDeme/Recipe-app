@@ -57,6 +57,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
 end
 
 group :development do
