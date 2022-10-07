@@ -1,4 +1,5 @@
 <h1 class="public-recipe-head">Public Recipes</h1>
+<% if @public_recipes.length != 0 %>
 <% @public_recipes.each do |recipe| %>
   <%recipe.recipe_foods.all.includes([:foods])%>
   <div class="public-recipe-cont">
@@ -6,7 +7,7 @@
     <div class="public-recipe-mini-count">
       <div>
         <h3>
-          <%= link_to recipe.name, recipe_path(id: recipe.id, user_id: recipe.user.id) %>
+          <%= link_to recipe.name, recipe_path(id: recipe.id) %>
         </h3>
         <h5>By: <%= recipe.user.name %></h5>
       </div>
@@ -22,6 +23,11 @@
    
   </div>
 </div>
-
 <%end%>
+<% else %>
+<div>
+<p class="public-recipe-head">No public recipe here</p>
+</div>
+<%end%>
+
 
