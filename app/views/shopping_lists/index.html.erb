@@ -1,0 +1,28 @@
+<h2>Shopping List</h2>
+ <% sum = 0 %>
+<% count = 0 %>
+ <% @shopping_lists.each do |shopping_list| %>
+<% sum += shopping_list.foods.price %>
+      <% count += 1%>
+ <%end%>
+  <h5>Total value  of food needed: $  <%= sum %></h5>
+  <h5> Amount of food:  <%= count %></h5>
+      <table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @shopping_lists.each do |shopping_list| %>
+    <tr>
+      <td><%= shopping_list.foods.name%></td>
+      <td><%= shopping_list.quantity%><%= shopping_list.foods.measurement_unit%></td>
+      <td>$<%= shopping_list.foods.price%></td>
+    </tr>
+    <%end%>
+  </tbody>
+  </table>
+
